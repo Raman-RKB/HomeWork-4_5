@@ -12,6 +12,9 @@ const mode = process.env.NODE_ENV === "production" ? "production" : "development
 module.exports = {
   entry: "./src/script.ts",
   mode,
+    resolve: {
+    extensions: ['.ts', '.js'],
+  },
   module: {
     rules: [
       {

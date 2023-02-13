@@ -1,5 +1,5 @@
-import templateEngine from './lib/template-engine.js'
-import Game from './play.js'
+import templateEngine from './lib/template-engine'
+import Game from './play'
 
 import './style.css'
 

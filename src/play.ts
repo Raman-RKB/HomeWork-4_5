@@ -1,8 +1,8 @@
-import templateEngine from './lib/template-engine.js'
-import Popup from './popup.js'
+import templateEngine from './lib/template-engine'
+import Popup from './popup'
 
 import Face from './img/face.jpg'
-import Level from './script.js'
+import Level from './script'
 
 export default class Game {
     parent: Element
@@ -182,19 +182,15 @@ export default class Game {
         }
     }
 
-    onStartTimer() {
+    onStartTimer(timerElement: HTMLElement) {
         this.timerMinutes.setAttribute('data-minutes', '')
         this.timerSeconds.setAttribute('data-seconds', '')
 
-        const timerElement = document.querySelector('.timer')
-        if (timerElement) {
-            // eslint-disable-next-line no-undef
-            this.timer = timezz(timerElement, {
-                date: new Date(),
-            })
+        this.timer = timezz(timerElement, {
+            date: new Date(),
+        })
 
-            this.timer.stopOnZero = false
-        }
+        this.timer.stopOnZero = false
     }
 
     onPauseTimer() {

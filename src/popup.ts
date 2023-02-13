@@ -1,5 +1,5 @@
-import templateEngine from './lib/template-engine.js'
-import Level from './script.js'
+import templateEngine from './lib/template-engine'
+import Level from './script'
 
 export default class Popup {
     parent: Element
